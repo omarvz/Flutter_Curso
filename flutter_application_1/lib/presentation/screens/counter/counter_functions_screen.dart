@@ -51,6 +51,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
             CustomButton(
               icon: Icons.exposure_minus_1,
               onPressed: () {
+                if(clickCounter < 1) return;
                 clickCounter--;
                 setState(() {});
               },
@@ -75,7 +76,6 @@ class CustomButton extends StatelessWidget {
     return FloatingActionButton(
       shape: const StadiumBorder(),
       enableFeedback: true,
-      tooltip: "Sumar",
       backgroundColor: Colors.blue.shade400,
       onPressed: onPressed,
       child: Icon(icon),
