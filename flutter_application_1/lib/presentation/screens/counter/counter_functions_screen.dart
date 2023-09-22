@@ -21,10 +21,9 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
         actions: [
           IconButton(
           icon: const Icon( Icons.refresh_rounded ),
-          onPressed: () { 
-            setState(() {
-              clickCounter = 0;
-            });
+          onPressed: () {
+            clickCounter = 0;
+            setState(() {});
            },)
         ],
       ),
@@ -40,27 +39,46 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
       floatingActionButton:  Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-            FloatingActionButton(
-              shape: const StadiumBorder(),
+            CustomButton(
+              icon: Icons.plus_one,
               onPressed: () {
                 clickCounter++;
                 setState(() {});
-              },
-              child: const Icon(Icons.plus_one),
-            ),
+              },),
 
             const SizedBox( height: 10,),
 
-            FloatingActionButton(
-              shape: const StadiumBorder(),
+            CustomButton(
+              icon: Icons.exposure_minus_1,
               onPressed: () {
-                if(clickCounter > 0) clickCounter--;
+                clickCounter--;
                 setState(() {});
               },
-              child: const Icon(Icons.exposure_minus_1),
-            ),
+              ),
         ],
       )
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+
+  final IconData icon;
+  final VoidCallback? onPressed;
+
+  const CustomButton({
+    super.key, required this.icon, this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      shape: const StadiumBorder(),
+      enableFeedback: true,
+      tooltip: "Sumar",
+      backgroundColor: Colors.blue.shade400,
+      onPressed: onPressed,
+      child: Icon(icon),
     );
   }
 }
