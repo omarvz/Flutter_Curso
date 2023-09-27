@@ -91,14 +91,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  kommunicate_flutter:
-    dependency: "direct main"
-    description:
-      name: kommunicate_flutter
-      sha256: "915931eeec6e5abf5f450cda2be378c7d106e8e90bbc3501fda20bffbeecf05b"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.7.0"
   lints:
     dependency: transitive
     description:
@@ -218,4 +210,3 @@ packages:
     version: "0.1.4-beta"
 sdks:
   dart: ">=3.1.1 <4.0.0"
-  flutter: ">=1.12.0"
