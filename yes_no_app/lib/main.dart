@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/config/theme/app_theme.dart';
-import 'package:yes_no_app/watson.dart';
+//import 'package:yes_no_app/watson.dart';
 
-//void main() => runApp(const MyApp());
+void main() => runApp(const MyApp());
 
-void main() => runApp(
+/* void main() => runApp(
   const MaterialApp(
     home: ChatScreen(),
   )
-  );
+); */
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
